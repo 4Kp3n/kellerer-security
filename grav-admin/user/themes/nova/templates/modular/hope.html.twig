@@ -1,0 +1,49 @@
+{# Section Wrapper #}
+<section id="{{ page.header.section_id|default('leistungen') }}"
+         class="{{ page.header.section_classes|default('ak-services') }}"
+         style="--ak-accent: {{ page.header.accent_color|default('#22c55e') }}">
+
+  {# Headline #}
+  {% if page.header.headline %}
+    <h2 class="ak-services__headline">{{ page.header.headline }}</h2>
+  {% endif %}
+
+  {# Grid #}
+  {% set cols = page.header.columns|default(3) %}
+  <div class="ak-services__grid ak-cols-{{ cols }}">
+    {% for c in page.header.cards %}
+      <article class="ak-card">
+
+        {# Icon: SVG inline (falls .svg), sonst <img> #}
+        {% if c.icon %}
+          {% set media = page.media[c.icon] ?? null %}
+          {% if media %}
+            <div class="ak-card__icon">
+              {% if media.extension == 'svg' %}
+                <span class="ak-card__icon-svg">{{ media.content|raw }}</span>
+              {% else %}
+                {{ media.html()|raw }}
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endif %}
+
+        {% if c.title %}
+          <h3 class="ak-card__title">{{ c.title }}</h3>
+        {% endif %}
+
+        {% if c.text %}
+          <p class="ak-card__text">{{ c.text }}</p>
+        {% endif %}
+
+        {% if c.button_url %}
+          <p class="ak-card__cta">
+            <a class="btn btn-primary" href="{{ c.button_url }}">
+              {{ c.button_text|default('Mehr Info') }}
+            </a>
+          </p>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </div>
+</section>

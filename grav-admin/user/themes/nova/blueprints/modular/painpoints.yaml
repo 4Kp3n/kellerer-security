@@ -1,0 +1,85 @@
+title: Painpoints
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+
+        content:
+          type: tab
+          title: Inhalt
+
+          fields:
+
+            header.template:
+              type: hidden
+              default: modular/painpoints
+
+            header.headline:
+              type: text
+              label: Abschnittsüberschrift
+              default: Meine Leistungen
+
+            header.section_id:
+              type: text
+              label: Section ID (für Anker)
+              default: painpoints
+
+            header.cards:
+              type: list
+              label: Karten
+              style: vertical
+              btnLabel: Karte hinzufügen
+              fields:
+                .icon:
+                  type: filepicker
+                  label: Icon (SVG/PNG, im Medien-Tab hochladen)
+                  folder: '@self'
+                  preview_images: true
+                  accept:
+                    - .svg
+                    - .png
+                    - .jpg
+                    - .jpeg
+                .icon_hover:
+                  type: filepicker
+                  label: Hover Icon (SVG/PNG, im Medien-Tab hochladen)
+                  folder: '@self'
+                  preview_images: true
+                  accept:
+                    - .svg
+                    - .png
+                    - .jpg
+                    - .jpeg
+                .title:
+                  type: text
+                  label: Titel
+                .text:
+                  type: textarea
+                  label: Beschreibung
+                  rows: 2
+                .button_text:
+                  type: text
+                  label: Button-Text
+                  default: Mehr Info
+                .button_url:
+                  type: text
+                  label: Button-URL
+
+        options:
+          type: tab
+          title: Optionen
+
+          fields:
+            header.columns:
+              type: select
+              label: Spalten (ab Desktop)
+              default: 2
+              options:
+                2: 2
+                3: 3
+                4: 4

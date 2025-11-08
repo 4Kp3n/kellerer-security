@@ -1,0 +1,139 @@
+/* Variablen */
+:root {
+  --text-color: #ffffff; 
+  --background-color: #0f172b;
+  --atk-yellow: #f5c400; 
+  --atk-blue: #14344c;
+}
+/* 1) Set the scrolled header background (highest match to your existing selectors) */
+body.header-fixed.header-animated #header.scrolled {
+  background: var(--background-color) !important;              /* your color */
+}
+
+/* Header-Logo (Desktop) – Spezifisch + überschreibt feste Höhe) */
+.section .container .navbar .navbar-section.logo .navbar-brand img {
+  height: auto !important;   /* überschreibt feste theme-Höhe */
+  max-height: 32px !important; /* Zielgröße anpassen */
+  width: auto;
+  display: block;
+}
+/* Mobile-Overlay-Logo (Menü aufgeklappt) */
+.mobile-container .mobile-logo img {
+  height: auto !important;
+  max-height: 36px !important; /* optional anpassen */
+}
+/* Falls das Theme irgendwo width/height am Link setzt */
+.section .container .navbar .navbar-section.logo .navbar-brand {
+  line-height: 1;      /* verhindert vertical misalign */
+}
+/*----------------------------------------------------------------------------*/
+
+/* Section */
+/* TODO change name to content-cards*/
+.ak-services {
+  padding: 4rem 1rem;
+  background-color: var(--background-color);
+  background-image: 
+    url('../images/Section-Background.png'),
+    url('../images/Background.png');
+  background-repeat: no-repeat, no-repeat;   
+  background-position: top center, top center; 
+  background-attachment: fixed, scroll;
+  color: var(--text-color);
+}
+.ak-services__headline {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin: 0 0 2rem 0;
+}
+
+/* Grid */
+.ak-services__grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 24px;
+}
+
+/* Maximal 2 Spalten: mobil 1, ab Tablet 2 */
+.ak-cols-2 { 
+  grid-template-columns: 1fr;            /* mobil: 1 Spalte */
+}
+@media (min-width: 768px) {
+  .ak-cols-2 { 
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* ab Tablet: fix 2 */
+  }
+}
+.ak-cols-3 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.ak-cols-4 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+
+/* Card */
+.ak-card {
+  background:oklch(29.3% 0.066 243.157);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 12px 24px #e0070740;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.ak-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.35);
+/*  background: (255, 255, 255, 0.06);*/
+  background: var(--highlight-color);
+  color: var(--atk-blue);
+}
+
+.btn.btn-primary { background: var(--highlight-color); border-color: #ca0000; color: #fff; }
+
+.btn.btn-primary:focus, .btn.btn-primary:hover { background: #00c020; border-color: #005eb0; color: #fff; }
+
+.btn.btn-primary:active, .btn.btn-primary.active { background: #b50000; border-color: #0059a6; color: #fff; }
+
+/* Icon */
+.ak-card__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  margin-bottom: 16px;
+}
+.ak-card__icon img { width: 50px; height: 50px; }
+
+/* Wenn SVG inline: einfärben über CSS-Variable */
+.ak-card__icon-svg svg {
+  width: 60px; height: 60px;
+  display: inline-block;
+  fill: var(--ak-accent, #22c55e);
+}
+.ak-card__icon .icon-hover {
+  display: none;
+}
+
+.ak-card:hover .icon-default {
+  display: none;
+}
+
+.ak-card:hover .icon-hover {
+  display: inline-block;
+}
+
+/* Typografie */
+.ak-card__title {
+  text-align: center;
+  font-size: 1.25rem;
+  margin: 0 0 .5rem 0;
+  color: inherit; 
+}
+.ak-card__text {
+  text-align: center;
+  opacity: .95;
+  margin: 0;
+  min-height: 72px; /* ruhige Höhe bei 3 Karten */
+}
+
+/* Button */
+.ak-card__cta { text-align: center; margin-top: 1rem; }
+.ak-card__button:hover { filter: brightness(1.05); }
+

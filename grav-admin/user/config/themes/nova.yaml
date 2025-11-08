@@ -1,0 +1,29 @@
+streams:
+  schemes:
+    theme:
+      type: ReadOnlyStream
+      prefixes:
+        '': ['user://themes/nova', 'user://themes/quark']
+enabled: true
+production-mode: true
+grid-size: grid-lg
+header-fixed: true
+header-animated: true
+header-dark: false
+header-transparent: false
+sticky-footer: true
+blog-page: /blog
+spectre:
+  exp: false
+  icons: '0'
+primary-color: '#f59e0b'
+secondary-color: '#1f2937'
+highlight-color: '#f59e0b'
+custom_logo:
+  user/themes/nova/images/logo/Logo_Kellerer_Security.svg:
+    name: Logo_Kellerer_Security.svg
+    full_path: Logo_Kellerer_Security.svg
+    type: image/svg+xml
+    size: 110385
+    path: user/themes/nova/images/logo/Logo_Kellerer_Security.svg
+custom_logo_mobile: {  }
