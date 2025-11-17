@@ -1,5 +1,6 @@
 grav-admin/cache/*
 grav-admin/logs/*
+grav-admin/images/*
 
 # Sensitive
 grav-admin/user/accounts/grav-admin.yaml
@@ -10,3 +11,4 @@ grav-admin/user/data/flex/indexes/accounts.yaml
 grav-admin/user/data/feed/*
 grav-admin/user/data/notifications/*
 grav-admin/user/data/scheduler/last_run.txt
+grav-admin/user/data/flex/indexes/pages.json
