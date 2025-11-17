@@ -1,15 +1,15 @@
 volumes:
-  grav-data:
+  grav-prod:
     driver: local
     driver_opts:
       type: none
-      device: $PROJECT_ROOT/grav-admin
+      device: $PROJECT_ROOT/grav
       o: bind
 
 services:
   grav:
     build: ./
     ports:
-      - 8080:80
+      - 80:80
     volumes:
-      - grav-data:/var/www/html
+      - grav-prod:/var/www/html
