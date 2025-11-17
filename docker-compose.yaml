@@ -7,7 +7,7 @@ volumes:
       o: bind
 
 services:
-  grav:
+  grav-dev:
     build: ./
     ports:
       - 8080:80

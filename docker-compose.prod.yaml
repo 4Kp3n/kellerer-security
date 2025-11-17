@@ -7,7 +7,7 @@ volumes:
       o: bind
 
 services:
-  grav:
+  grav-prod:
     build: ./
     ports:
       - 80:80
