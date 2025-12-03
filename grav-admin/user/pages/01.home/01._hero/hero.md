@@ -2,8 +2,7 @@
 title: 'Homepage Hero'
 menu: Top
 hero_classes: 'parallax text-light hero-fullscreen'
-hero_image: Hero.png
-media_order: 'header.png,Cyber.png'
+hero_image: Hero.jpg
 ---
 
 # Resilienz gegen digitale Bedrohungen
