@@ -1,0 +1,9 @@
+{# Section Wrapper #}
+<section id="{{ page.header.section_id|default('solutions') }}"
+         class="ak-services {{ page.header.section_classes|default('') }}"
+         style="--ak-accent: {{ page.header.accent_color|default('#22c55e') }}">
+
+  {# Headline #}
+  {% if page.header.headline %}
+    <h2 class="ak-services__headline">{{ page.header.headline }}</h2>
+  {% endif %}
