@@ -7,8 +7,8 @@ date: '15:03 19-09-2025'
 Angaben gemäß § 5 DDG
 
 Andreas Kellerer  
-Würselener Str. 2  
-52080 Aachen  
+Friedrich-Ebert-Str. 34  
+93051 Regensburg  
 Deutschland  
 
 Freiberuflich tätig im Bereich IT/OT-Security und Penetrationstests
@@ -16,7 +16,7 @@ Freiberuflich tätig im Bereich IT/OT-Security und Penetrationstests
 #### Kontakt
 
 Telefon: +49 176 84 9793 84  
-E-Mail: contact@kellerer-security.de
+E-Mail: andreas@kellerer-security.de
 
 #### Umsatzsteuer-ID
 

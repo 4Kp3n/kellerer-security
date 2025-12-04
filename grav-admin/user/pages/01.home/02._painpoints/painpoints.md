@@ -26,14 +26,14 @@ cards:
         icon: Geldsack_Gelb.svg
         icon_hover: Geldsack_Dunkelblau.svg
         title: 'Hohe Kosten'
-        text: 'Lizenzkosten für moderne Sicherheitslösungen sind oft unverhältnismäßig hoch. Hinzu kommt, dass sie für Unternehmen der Industrie- und Fertigungstechnik mit fragmentierten OT-Umgebungen meist keine Option'
+        text: 'Lizenzkosten für moderne Sicherheitslösungen sind oft unverhältnismäßig hoch. Hinzu kommt, dass sie für Unternehmen der Industrie- und Fertigungstechnik mit fragmentierten OT-Umgebungen meist keine Option sind'
         button_text: 'Mehr Info'
         button_url: null
     -
         icon: Experte_Gelb.svg
         icon_hover: Experte_Dunkelblau.svg
         title: 'Mangel an Experten'
-        text: 'OT-Umgebungen haben besondere Anforderungen im Vergleich zu IT-Systemen - Experten, welche beide Welten verstehen und als Übersetzer fungieren können sind selten'
+        text: 'OT-Umgebungen haben besondere Anforderungen im Vergleich zu IT-Systemen - Experten, welche beide Welten verstehen und als Übersetzer fungieren können, sind selten'
         button_text: 'Mehr Info'
         button_url: null
 ---
