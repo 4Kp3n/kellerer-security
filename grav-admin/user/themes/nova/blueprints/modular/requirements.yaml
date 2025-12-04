@@ -1,0 +1,67 @@
+title: Text-Bild Alternierend
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+
+        content:
+          type: tab
+          title: Inhalt
+
+          fields:
+
+            header.template:
+              type: hidden
+              default: modular/requirement
+
+            header.headline:
+              type: text
+              label: Abschnittsüberschrift
+              default: Unsere Expertise
+
+            header.section_id:
+              type: text
+              label: Section ID (für Anker)
+              default: expertise
+
+            header.rows:
+              type: list
+              label: Zeilen
+              style: vertical
+              btnLabel: Zeile hinzufügen
+              fields:
+                .text_position:
+                  type: select
+                  label: Textposition in dieser Zeile
+                  default: left
+                  options:
+                    left: Links
+                    right: Rechts
+                .text_heading:
+                  type: text
+                  label: Überschrift (Heading)
+                .text_subheading:
+                  type: text
+                  label: Unterüberschrift
+                .text_content:
+                  type: textarea
+                  label: Beschreibungstext
+                  rows: 4
+                .image:
+                  type: filepicker
+                  label: Bild
+
+            header.tile_gap:
+              type: select
+              label: Abstand zwischen Kacheln
+              default: md
+              options:
+                sm: Klein
+                md: Mittel
+                lg: Groß
+                xl: Extra Groß

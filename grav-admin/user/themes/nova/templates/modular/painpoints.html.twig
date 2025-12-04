@@ -5,7 +5,7 @@
 
   {# Headline #}
   {% if page.header.headline %}
-    <h2 class="ak-services__headline">{{ page.header.headline }}</h2>
+    <h2 class="headline">{{ page.header.headline }}</h2>
   {% endif %}
 
   {# Grid #}
@@ -14,34 +14,34 @@
     {% for c in page.header.cards %}
       <article class="ak-card">
 
-{# Icon-Block: normales + Hover-Icon #}
-{% if c.icon %}
-  {% set media_default = page.media[c.icon] ?? null %}
-  {% set media_hover = page.media[c.icon_hover] ?? null %}
+        {# Icon-Block: normales + Hover-Icon #}
+        {% if c.icon %}
+          {% set media_default = page.media[c.icon] ?? null %}
+          {% set media_hover = page.media[c.icon_hover] ?? null %}
 
-  {% if media_default %}
-    <div class="ak-card__icon">
-      {# Default Icon #}
-      {% if media_default.extension == 'svg' %}
-        <span class="icon-default ak-card__icon-svg">{{ media_default.content|raw }}</span>
-      {% else %}
-<img src="{{ media_default.url }}" class="icon-default" alt="">
-      {% endif %}
+          {% if media_default %}
+            <div class="ak-card__icon">
+              {# Default Icon #}
+              {% if media_default.extension == 'svg' %}
+                <span class="icon-default ak-card__icon-svg">{{ media_default.content|raw }}</span>
+              {% else %}
+                <img src="{{ media_default.url }}" class="icon-default" alt="">
+              {% endif %}
 
-      {# Hover Icon (optional) #}
-      {% if media_hover %}
-        {% if media_hover.extension == 'svg' %}
-          <span class="icon-hover ak-card__icon-svg">{{ media_hover.content|raw }}</span>
-        {% else %}
-<img src="{{ media_hover.url }}" class="icon-hover" alt="">
+              {# Hover Icon (optional) #}
+              {% if media_hover %}
+                {% if media_hover.extension == 'svg' %}
+                  <span class="icon-hover ak-card__icon-svg">{{ media_hover.content|raw }}</span>
+                {% else %}
+                  <img src="{{ media_hover.url }}" class="icon-hover" alt="">
+                {% endif %}
+              {% endif %}
+            </div>
+          {% endif %}
         {% endif %}
-      {% endif %}
-    </div>
-  {% endif %}
-{% endif %}
 
         {% if c.title %}
-          <h3 class="ak-card__title">{{ c.title }}</h3>
+          <h3 class="item-title center">{{ c.title }}</h3>
         {% endif %}
 
         {% if c.text %}

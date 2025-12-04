@@ -31,10 +31,9 @@ body.header-fixed.header-animated #header.scrolled {
 .btn.btn-primary { background: var(--highlight-color); border-color: #ca0000; color: #fff; }
 .btn.btn-primary:focus, .btn.btn-primary:hover { background: #00c020; border-color: #005eb0; color: #fff; }
 .btn.btn-primary:active, .btn.btn-primary.active { background: #b50000; border-color: #0059a6; color: #fff; }
+
 /*----------------------------------------------------------------------------*/
-
-/* Hintergrund-Klassen */
-
+/* Background classes */
 .parallax-background {
   background-color: var(--background-color);
   background-image:
@@ -56,8 +55,9 @@ body.header-fixed.header-animated #header.scrolled {
   background-color: var(--atk-blue);
   color: var(--text-color);
 }
-
-.ak-services__headline {
+/*----------------------------------------------------------------------------*/
+/* Headline classes */
+.headline {
   text-align: center;
   color: var(--text-color);
   font-size: 2.5rem;
@@ -131,11 +131,14 @@ body.header-fixed.header-animated #header.scrolled {
 }
 
 /* Typografie */
-.ak-card__title {
-  text-align: center;
+.item-title {
   font-size: 1.25rem;
   margin: 0 0 .5rem 0;
   color: inherit; 
+}
+
+.item-title.center {
+  text-align: center;
 }
 .ak-card__text {
   text-align: center;
@@ -148,3 +151,57 @@ body.header-fixed.header-animated #header.scrolled {
 .ak-card__cta { text-align: center; margin-top: 1rem; }
 .ak-card__button:hover { filter: brightness(1.05); }
 
+
+/*----------------------------------------------------------------------------*/
+/* Requirements-Klassen */
+.requirement-section {
+  width: 100%;
+  margin: 4rem 0;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.row.text-right {
+  flex-direction: row-reverse;
+}
+
+.text h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.text h4 {
+  margin: 0 0 1rem 0;
+  font-weight: 400;
+}
+
+.text p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.image img {
+  max-width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.tile-gap-sm .row { gap: 1rem; }
+.tile-gap-md .row { gap: 2rem; }
+.tile-gap-lg .row { gap: 3rem; }
+.tile-gap-xl .row { gap: 4rem; }
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column;
+  }
+}

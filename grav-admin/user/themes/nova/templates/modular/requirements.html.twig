@@ -1,11 +1,38 @@
-{# Section Wrapper #}
-<section id="{{ page.header.section_id|default('requirements') }}"
-         class="background {{ page.header.section_classes|default('') }}"
-         style="--ak-accent: {{ page.header.accent_color|default('#22c55e') }}">
-
-  {# Headline #}
+<div class="background" id="{{ page.header.section_id }}">
   {% if page.header.headline %}
-    <h2 class="ak-services__headline">{{ page.header.headline }}</h2>
+    <h2 class="headline">{{ page.header.headline }}</h2>
   {% endif %}
 
-</section>
+  <div class="ak-services__grid rows tile-gap-{{ page.header.tile_gap }}">
+    {% for row in page.header.rows %}
+      <div class="row row-{{ loop.index }} text-{{ row.text_position }}">
+
+        {# Textblock #}
+        <div class="text">
+          {% if row.text_heading %}
+            <h3 class="item-title">{{ row.text_heading }}</h3>
+          {% endif %}
+
+          {% if row.text_subheading %}
+            <h4>{{ row.text_subheading }}</h4>
+          {% endif %}
+
+          {% if row.text_content %}
+            <p>{{ row.text_content }}</p>
+          {% endif %}
+        </div>
+
+        {# Bildblock #}
+        {% if row.image %}
+          {% set img = page.media[row.image] %}
+          {% if img %}
+            <div class="image">
+              <img src="{{ img.url }}" alt="">
+            </div>
+          {% endif %}
+        {% endif %}
+
+      </div>
+    {% endfor %}
+  </div>
+</div>
