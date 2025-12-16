@@ -1,0 +1,29 @@
+{# partials/section-wrapper.html.twig #}
+<section
+  id="{{ section_id|default('painpoints') }}"
+  class="parallax-background standard {{ section_classes|default('') }}"
+  style="--ak-accent: {{ accent_color|default('#22c55e') }}"
+>
+  {# Headline (optional) #}
+  {% if headline %}
+    {% include 'partials/headline.html.twig' with {
+      'headline': headline,
+      'headline_class': headline_class|default('headline')
+    } %}
+  {% endif %}
+
+  {# Grid mit Cards #}
+  <div class="ak-services__grid ak-cols-{{ cols|default(2) }}">
+    {% for card in cards %}
+      {% include 'partials/icon-card.html.twig' with {
+        'icon': card.icon,
+        'icon_hover': card.icon_hover,
+        'title': card.title,
+        'text': card.text,
+        'button_url': card.button_url,
+        'button_text': card.button_text|default('Mehr Info'),
+        'media': page.media
+      } %}
+    {% endfor %}
+  </div>
+</section>
