@@ -1,0 +1,46 @@
+{# partials/card.html.twig #}
+<article class="ak-card">
+  {# Icon-Block (optional) #}
+  {% if icon %}
+    {% set media_default = media[icon] ?? null %}
+    {% set media_hover = media[icon_hover] ?? null %}
+    {% if media_default %}
+      <div class="ak-card__icon">
+        {# Default Icon #}
+        {% if media_default.extension == 'svg' %}
+          <span class="icon-default ak-card__icon-svg">{{ media_default.content|raw }}</span>
+        {% else %}
+          <img src="{{ media_default.url }}" class="icon-default" alt="{{ title|default('Icon') }}">
+        {% endif %}
+
+        {# Hover Icon (optional) #}
+        {% if media_hover %}
+          {% if media_hover.extension == 'svg' %}
+            <span class="icon-hover ak-card__icon-svg">{{ media_hover.content|raw }}</span>
+          {% else %}
+            <img src="{{ media_hover.url }}" class="icon-hover" alt="{{ title|default('Icon') }}">
+          {% endif %}
+        {% endif %}
+      </div>
+    {% endif %}
+  {% endif %}
+
+  {# Titel (optional) #}
+  {% if title %}
+    <h3 class="item-title center">{{ title }}</h3>
+  {% endif %}
+
+  {# Text (optional) #}
+  {% if text %}
+    <p class="ak-card__text">{{ text }}</p>
+  {% endif %}
+
+  {# Button (optional) #}
+  {% if button_url %}
+    <p class="ak-card__cta">
+      <a class="button" href="{{ button_url }}">
+        {{ button_text }}
+      </a>
+    </p>
+  {% endif %}
+</article>

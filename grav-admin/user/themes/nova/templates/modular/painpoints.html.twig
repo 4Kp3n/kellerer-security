@@ -1,61 +1,15 @@
-{# Section Wrapper #}
-<section id="{{ page.header.section_id|default('painpoints') }}"
-         class="parallax-background standard {{ page.header.section_classes|default('') }}"
-         style="--ak-accent: {{ page.header.accent_color|default('#22c55e') }}">
+{# modular.html.twig #}
 
-  {# Headline #}
-  {% if page.header.headline %}
-    <h2 class="headline">{{ page.header.headline }}</h2>
-  {% endif %}
-
-  {# Grid #}
-  {% set cols = page.header.columns|default(2) %}
-  <div class="ak-services__grid ak-cols-{{ cols }}">
-    {% for c in page.header.cards %}
-      <article class="ak-card">
-
-        {# Icon-Block: normales + Hover-Icon #}
-        {% if c.icon %}
-          {% set media_default = page.media[c.icon] ?? null %}
-          {% set media_hover = page.media[c.icon_hover] ?? null %}
-
-          {% if media_default %}
-            <div class="ak-card__icon">
-              {# Default Icon #}
-              {% if media_default.extension == 'svg' %}
-                <span class="icon-default ak-card__icon-svg">{{ media_default.content|raw }}</span>
-              {% else %}
-                <img src="{{ media_default.url }}" class="icon-default" alt="">
-              {% endif %}
-
-              {# Hover Icon (optional) #}
-              {% if media_hover %}
-                {% if media_hover.extension == 'svg' %}
-                  <span class="icon-hover ak-card__icon-svg">{{ media_hover.content|raw }}</span>
-                {% else %}
-                  <img src="{{ media_hover.url }}" class="icon-hover" alt="">
-                {% endif %}
-              {% endif %}
-            </div>
-          {% endif %}
-        {% endif %}
-
-        {% if c.title %}
-          <h3 class="item-title center">{{ c.title }}</h3>
-        {% endif %}
-
-        {% if c.text %}
-          <p class="ak-card__text">{{ c.text }}</p>
-        {% endif %}
-
-        {% if c.button_url %}
-          <p class="ak-card__cta">
-            <a class="button" href="{{ c.button_url }}">
-              {{ c.button_text|default('Mehr Info') }}
-            </a>
-          </p>
-        {% endif %}
-      </article>
-    {% endfor %}
-  </div>
-</section>
+{% block content %}
+  {# Section Wrapper mit Daten aus dem Frontmatter #}
+  {% include 'partials/card-grid-wrapper.html.twig' with {
+    'section_id': page.header.section_id,
+    'section_classes': page.header.section_classes,
+    'accent_color': page.header.accent_color,
+    'headline': page.header.headline,
+    'headline_class': 'headline',
+    'cols': page.header.columns,
+    'cards': page.header.cards,
+    'media': page.media
+  } %}
+{% endblock %}
