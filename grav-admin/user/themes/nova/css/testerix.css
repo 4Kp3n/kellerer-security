@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.testerix-container {
+    position: relative;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.box {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.green {
+    background-color: green;
+    left: 10%;
+    top: 150px;
+}
+
+.purple {
+    background-color: purple;
+    left: 10%;
+    top: 270px;
+}
+
+.blue {
+    background-color: blue;
+    left: 10%;
+    top: 390px;
+}

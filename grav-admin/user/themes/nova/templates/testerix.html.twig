@@ -1,0 +1,20 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+<body>
+  <div class="box green"></div>
+  <div class="box purple"></div>
+  <div class="box blue"></div>
+</body>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% do assets.addJs('https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js') %}
+    {% do assets.addJs('https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js') %}
+    {% do assets.addJs('theme://js/testerix.js') %}
+{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    {% do assets.addCss('theme://css/testerix.css') %}
+{% endblock %}
