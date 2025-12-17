@@ -1,0 +1,17 @@
+.headline {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin: 0 0 2rem 0;
+}
+
+.item-title {
+  font-size: 1.25rem;
+  margin: 0 0 .5rem 0;
+  color: inherit; 
+}
+
+.item-title.center {
+  text-align: center;
+}

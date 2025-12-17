@@ -1,0 +1,23 @@
+/*----------------------------------------------------------------------------*/
+/* Background classes */
+.parallax-background {
+  background-color: var(--background-color);
+  background-image:
+    url('../images/Section-Background.png'),
+    url('../images/Background.png');
+  background-repeat: no-repeat, no-repeat;   
+  background-position: top center, top center;
+  background-attachment: fixed, scroll;
+  color: var(--text-color);
+}
+.parallax-background.standard {
+  padding: 4rem 1rem;
+}
+.parallax-background.compact {
+  padding: 2rem 0.5rem;
+}
+.background {
+  padding: 4rem 1rem;
+  background-color: var(--atk-blue);
+  color: var(--text-color);
+}

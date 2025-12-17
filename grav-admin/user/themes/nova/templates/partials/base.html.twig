@@ -17,12 +17,12 @@
     <link rel="canonical" href="{{ page.url(true, true) }}" />
     <link rel="preload" as="image" href="/user/pages/01.home/01._hero/Hero.png">
     <style>
-:root{
-  --primary-color: {{ theme_var('primary-color', '#f59e0b') }};
-  --secondary-color: {{ theme_var('secondary-color', '#1f2937') }};
-  --highlight-color: {{ theme_var('highlight-color', '#0ea5a3') }};
-}
-</style>
+        :root{
+          --primary-color: {{ theme_var('primary-color', '#f59e0b') }};
+          --secondary-color: {{ theme_var('secondary-color', '#1f2937') }};
+          --highlight-color: {{ theme_var('highlight-color', '#0ea5a3') }};
+        }
+    </style>
 {% endblock head %}
 
 {% block stylesheets %}
@@ -30,7 +30,11 @@
     {% if theme_var('spectre.exp') %}{% do assets.addCss('theme://css-compiled/spectre-exp'~compress) %}{% endif %}
     {% if theme_var('spectre.icons') %}{% do assets.addCss('theme://css-compiled/spectre-icons'~compress) %}{% endif %}
     {% do assets.addCss('theme://css-compiled/theme'~compress) %}
+    {% do assets.addCss('theme://css/background.css') %}
     {% do assets.addCss('theme://css/custom.css') %}
+    {% do assets.addCss('theme://css/icon-card.css') %}
+    {% do assets.addCss('theme://css/text.css') %}
+    {% do assets.addCss('theme://css/card-grid.css') %}
     {% do assets.addCss('theme://css/line-awesome.min.css') %}
 {% endblock %}
 
@@ -45,6 +49,7 @@
     {{ assets.js()|raw }}
 {% endblock %}
 </head>
+
 <body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}">
     <div id="page-wrapper">
     {% block header %}
@@ -77,7 +82,7 @@
                 <span class="bottom"></span>
             </div>
         </div>
-    {% endblock %}
+    {% endblock header %}
 
     {% block hero %}{% endblock %}
 
@@ -95,6 +100,7 @@
         </section>
 
     </div>
+
 
     {% block footer %}
         {% include 'partials/footer.html.twig' %}
