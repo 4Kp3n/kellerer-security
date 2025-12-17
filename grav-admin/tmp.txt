@@ -1,0 +1,40 @@
+```
+{# Section Wrapper #}
+<section id="{{ page.header.section_id|default('painpoints') }}"
+         class="parallax-background standard {{ page.header.section_classes|default('') }}"
+         style="--ak-accent: {{ page.header.accent_color|default('#22c55e') }}">
+
+  {# Headline #}
+  {% if page.header.headline %}
+    <h2 class="headline">{{ page.header.headline }}</h2>
+  {% endif %}
+  <div class="demo-wrapper">
+    <div class="box">Move me</div>
+  </div>
+
+  {% include 'partials/icon-card.html.twig' with {
+    'icon': page.header.icon,
+    'icon_hover': page.header.icon_hover,
+    'title': page.header.title,
+    'text': page.header.text,
+    'button_url': page.header.button_url,
+    'button_text': page.header.button_text|default('Mehr Info'),
+  } %}
+
+</section>
+```
+
+```
+---
+title: Testerix
+onpage_menu: '0'
+content:
+    items: '@self.modular'
+template: modular/statistics
+headline: 'Statistiken im Überblick'
+icon: Law_Gelb.svg
+icon_hover: Law_Gelb.svg
+text: 'Frontmatter verwendet (auch) `header` und `body` Unterscheidung. Es ist demnach wichtig in den Templates auf Variablen mittels "page.header.variable" zuzugreifen'
+---
+
+```
