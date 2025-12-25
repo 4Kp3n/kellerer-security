@@ -2,6 +2,7 @@
 .ak-services__grid {
   max-width: 1100px;
   margin: 0 auto;
+  margin-top: 1rem;
   display: grid;
   gap: 24px;
 }

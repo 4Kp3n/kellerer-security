@@ -2,7 +2,7 @@
 :root {
   --text-color: #ffffff; 
   --background-color: #0f172b;
-  --atk-yellow: #f5c400; 
+  --atk-yellow: #f59e0b;
   --atk-blue: #14344c;
 }
 
@@ -29,8 +29,8 @@ body.header-fixed.header-animated #header.scrolled {
 }
 
 /* Button overrides */
-.btn.btn-primary { background: var(--highlight-color); border-color: #ca0000; color: #fff; }
-.btn.btn-primary:focus, .btn.btn-primary:hover { background: #00c020; border-color: #005eb0; color: #fff; }
+.btn.btn-primary { background: var(--atk-yellow); border-color: var(--atk-blue); color: var(--text-color); }
+.btn.btn-primary:focus, .btn.btn-primary:hover { background: var(--atk-blue); border-color: var(--atk-yellow); color: var(--text-color); }
 .btn.btn-primary:active, .btn.btn-primary.active { background: #b50000; border-color: #0059a6; color: #fff; }
 
 /*----------------------------------------------------------------------------*/

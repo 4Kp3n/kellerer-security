@@ -1,0 +1,64 @@
+
+<section
+  id="{{ section_id|default('angebote') }}"
+  class="background {{ section_classes|default('') }}"
+>
+
+  {% if page.header.headline %}
+    <h2 class="headline">{{ page.header.headline }}</h2>
+  {% endif %}
+
+  <div class="ak-services__grid ak-cols-{{ cols|default(2) }}">
+      {% include 'partials/icon-card.html.twig' with {
+        'icon': card.icon,
+        'icon_hover': card.icon_hover,
+        'title': 'Pentests',
+        'text': 'Ein praktischer Realitätscheck ob die interne IT wirklich resilient ist. Kein Gerede, keine PowerPoint Folien - nur echte Ergebnisse mit einer glasklaren Einstufung.',
+        'button_url': card.button_url,
+        'button_text': card.button_text|default('Mehr Info'),
+        'media': page.media
+      } %}
+      {% set img = page.media['Pentest.jpg'] %}
+      {% if img %}
+        <div class="image">
+          <img src="{{ img.url }}" alt="">
+        </div>
+      {% endif %}
+  </div>
+
+  <div class="ak-services__grid ak-cols-{{ cols|default(2) }}">
+      {% include 'partials/icon-card.html.twig' with {
+        'icon': card.icon,
+        'icon_hover': card.icon_hover,
+        'title': 'APT Simulation',
+        'text': 'Große Unternehmensnetzwerke hermetisch gegen Gefahren abzuriegeln ist in Zeiten von Remote-Arbeit und BYOD kaum möglich. Umso wichtiger, dass Anomalien zuverlässig von den zuständigen Personen detektiert werden können. Mit meiner APT-Simulation liefere ich ein Angriffszenario unter echten Bedingungen mit echten Techniken von internationalen Hackergruppen.',
+        'button_url': card.button_url,
+        'button_text': card.button_text|default('Mehr Info'),
+        'media': page.media
+      } %}
+      {% set img = page.media['APT-Simulation.jpg'] %}
+      {% if img %}
+        <div class="image">
+          <img src="{{ img.url }}" alt="">
+        </div>
+      {% endif %}
+  </div>
+
+  <div class="ak-services__grid ak-cols-{{ cols|default(2) }}">
+      {% include 'partials/icon-card.html.twig' with {
+        'icon': card.icon,
+        'icon_hover': card.icon_hover,
+        'title': 'Security Awareness Bootcamp',
+        'text': 'Jeder Einzelne muss seinen Teil beitragen, um das Unternehmen gegen Gefahren zu verteidigen. Mit meiner langfährigen Erfahrung technische Konzepte Verständlich zu vermitteln und meinen einzigartigen praxisorientierten Ansatz liefere ich Security Awareness Schulungen, welche im Kopf bleiben.',
+        'button_url': card.button_url,
+        'button_text': card.button_text|default('Mehr Info'),
+        'media': page.media
+      } %}
+      {% set img = page.media['Awareness-Bootcamp.jpg'] %}
+      {% if img %}
+        <div class="image">
+          <img src="{{ img.url }}" alt="">
+        </div>
+      {% endif %}
+  </div>
+</section>

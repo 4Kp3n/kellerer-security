@@ -7,9 +7,9 @@ hero_image: Hero.jpg
 
 # Resilienz gegen digitale Bedrohungen
 
-### Starke OT-Security für die Industrie
+### Starke Security für die Industrie
 
-[Find out more...](https://getgrav.org?classes=btn,btn-primary,btn-lg)
+[Kontaktaufnahme](https://cloud.kellerer-security.de/termine?classes=btn,btn-primary,btn-lg)
 
 
 
