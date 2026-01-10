@@ -4,13 +4,13 @@ date: '15:03 19-09-2025'
 ---
 
 #### Datenschutzerklärung
-_Stand: November 2025_
+_Stand: Januar 2026_
 
 Der Schutz persönlicher Daten und die Transparenz bei der Datenverarbeitung ist mir als Security Experte ein besonderes Anliegen. Ich betreibe diese Webseite ohne Werbung, Tracking oder externe Skripte.
 
 ##### 1. Verantwortlicher
 Andreas Kellerer  
-E-Mail: contact@kellerer-security.de  
+E-Mail: andreas@kellerer-security.de  
 (weitere Angaben im Impressum)
 
 ##### 2. Server-Logs
