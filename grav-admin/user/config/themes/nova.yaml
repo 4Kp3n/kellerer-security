@@ -15,7 +15,7 @@ sticky-footer: true
 blog-page: /blog
 spectre:
   exp: false
-  icons: '0'
+  icons: false
 primary-color: '#f59e0b'
 secondary-color: '#1f2937'
 highlight-color: '#f59e0b'
@@ -26,4 +26,10 @@ custom_logo:
     type: image/svg+xml
     size: 110385
     path: user/themes/nova/images/logo/Logo_Kellerer_Security.svg
-custom_logo_mobile: {  }
+custom_logo_mobile:
+  user/themes/nova/images/logo/Logo_Kellerer_Security.svg:
+    name: Logo_Kellerer_Security.svg
+    full_path: Logo_Kellerer_Security.svg
+    type: image/svg+xml
+    size: 110375
+    path: user/themes/nova/images/logo/Logo_Kellerer_Security.svg
