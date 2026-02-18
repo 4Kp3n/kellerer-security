@@ -16,7 +16,9 @@ Freiberuflich tätig im Bereich IT/OT-Security und Penetrationstests
 #### Kontakt
 
 Telefon: +49 176 84 9793 84  
-E-Mail: andreas@kellerer-security.de
+E-Mail: andreas@kellerer-security.de  
+
+GPG Fingerprint: 5D13 158A DA56 6EC8 F30E FDCC F3EB 4DC9 46C6 1559 
 
 #### Umsatzsteuer-ID
 
