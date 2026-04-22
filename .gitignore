@@ -14,3 +14,4 @@ grav-admin/user/data/scheduler/last_run.txt
 grav-admin/user/data/flex/indexes/pages.json
 
 .env
+CLAUDE.md

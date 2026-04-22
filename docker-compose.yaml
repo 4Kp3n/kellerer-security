@@ -11,5 +11,7 @@ services:
     build: ./
     ports:
       - 8080:80
+    environment:
+      - FIX_PERMISSIONS=true
     volumes:
       - grav-data:/var/www/html
